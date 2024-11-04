@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w-full max-w-lg mx-auto">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h2 class="text-2xl font-bold mb-6">Developer Console</h2>
+        <form method="POST" class="mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="command">
+                    Command
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="command" name="command" type="text" placeholder="Enter command..." required>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Execute
+                </button>
+            </div>
+        </form>
+        <div class="mt-4 p-4 bg-gray-200 rounded">
+            <h3 class="font-semibold mb-2">Available Commands:</h3>
+            <ul class="list-disc list-inside">
+                <li>USERPUBLIK CREATE [username] [password]</li>
+                <li>USERPUBLIK DEL [username]</li>
+                <li>DELETEPOST [post_id]</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
